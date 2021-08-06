@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Header from "../Header";
 
-// W.r.t Component
+// W.r.t Query Methods
 
 describe("Header", () => {
   // Sanapshot
