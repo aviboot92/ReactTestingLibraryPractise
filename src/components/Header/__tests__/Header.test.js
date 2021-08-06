@@ -4,6 +4,12 @@ import Header from "../Header";
 // W.r.t Component
 
 describe("Header", () => {
+  // Sanapshot
+  it("should render correctly", () => {
+    render(<Header title="Dogs" />);
+    expect(screen).toMatchSnapshot();
+  });
+
   // Get
   it("should render the same text passed in the title Prop", () => {
     render(<Header title="My Head" />);
