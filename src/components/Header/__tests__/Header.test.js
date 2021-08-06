@@ -11,15 +11,15 @@ describe("Header", () => {
     expect(headerElement).toBeInTheDocument();
   });
 
-  it("should render the same text passed in the prop", () => {
-    render(<Header title="My Roles" />);
-    const headerElement = screen.getByRole("heading");
-    expect(headerElement).toBeInTheDocument();
-  });
+  // it("should render the same text passed in the prop", () => {
+  //   render(<Header title="My Roles" />);
+  //   const headerElement = screen.getByRole("heading");
+  //   expect(headerElement).toBeInTheDocument();
+  // });
 
-  //   it("should render the my cats text passed in the title prop", () => {
-  //     render(<Header title="My Cats" />);
-  //     const catHeader = screen.getByRole("heading", { name: "My Cats" });
-  //     expect(catHeader).toBeInTheDocument();
-  //   });
+  it("should render the my cats text passed in the title prop", () => {
+    render(<Header title="My Cats" />);
+    const catHeader = screen.getByRole("heading", { name: "Hello" });
+    expect(catHeader).toBeInTheDocument();
+  });
 });
