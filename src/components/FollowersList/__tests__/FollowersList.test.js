@@ -1,4 +1,4 @@
-import { render, screen, findByTestId } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import FollowersList from "./../FollowersList";
 
@@ -19,6 +19,7 @@ describe("renders FollowersList", () => {
   it("should render the follower item correctly", async () => {
     render(<MockFollowersList />);
     const followerItem = await screen.findByTestId("follower-item-0");
+    screen.debug();
     expect(followerItem).toBeInTheDocument();
   });
 
